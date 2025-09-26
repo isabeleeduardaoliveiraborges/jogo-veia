@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to top, #2d0000, #5c0000, #7b0202);
+  background-attachment: fixed;
+}
+
+#game {
+  width: 350px; 
+  margin: 0 auto;
+  position: relative;
+}
+
+#game header {
+  position: relative;
+  text-align: center;
+}
+
+#game header img {
+  width: 150px; 
+  display: block;
+  margin: 0 auto 10px auto;
+  position: relative;
+  top: 0;
+  transform: none;
+}
+
+#game header h1 {
+  color: #e82626;
+  font-size: 2.2rem;
+  text-align: center;
+  padding: 0 0 2rem;  
+  position: relative;
+  z-index: 10; 
+}
+
+.board {
+  margin-bottom: 3rem; 
+}
+
+.board .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.board .row:not(:last-child) {
+  border-bottom: 3px solid #000033;
+}
+
+.board .row > .cell:not(:last-child) {
+  border-right: 3px solid #000033;
+}
+
+.board .cell {
+  color: #000000;
+  cursor: pointer; 
+  height: 100px; 
+  font-size: 2rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board .cell:hover {
+  background-color: #a13434;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions button {
+  font-size: 0.9rem; 
+  height: 44px; 
+  cursor: pointer;
+  color: #ffc2c2;
+  padding: 0 1.5rem; 
+  background-color: #7c1818;
+  border: none;
+  appearance: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.actions button:hover {
+  background-color: #6e2626;
+}
+
+.gameover {
+  color: #4b0d0d;
+  font-size: 2.2rem; 
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 310px; 
+  background: linear-gradient(
+    to top,
+    rgba(199, 92, 113, 0.6),   
+    rgba(236, 177, 192, 0.6),  
+    rgba(236, 216, 224, 0.6)   
+  );
+}
